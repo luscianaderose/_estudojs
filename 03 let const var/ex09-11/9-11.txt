@@ -1,0 +1,15 @@
+Explique com suas palavras (use um arquivo .txt para colocar as respostas)
+
+9. Quais são as formas de declarar variáveis no JavaScript 
+e quais são as diferenças entre cada uma?
+const não pode ser decladara novamente e nem receber novo valor
+let muda
+var não é mais usada
+
+10. O que é hoisting e quando ele acontece?
+Acontece com a variável VAR. Ela pode ser declarada a qualquer momento 
+que o programa age como se ela fosse declarada na primeira linha.
+
+11. Cite exceções em que variáveis declaradas com o const 
+podem ter seu conteúdo modificado.
+Arrays

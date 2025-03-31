@@ -1,0 +1,9 @@
+1. Escreva um algoritmo em linguagem natural para calcular a média aritmética de um aluno. 
+Para esta média utilize duas notas. 
+(Escreva seu algoritmo em bloco de notas)
+
+- Pegar nota 1.
+- Pegar nota 2.
+- Somar as duas notas.
+- Dividir o resultado da soma das duas notas por 2.
+- Exibir o resultado.

@@ -1,0 +1,21 @@
+TEXTO
+- Explicar como resolveu o desafio passo a passo.
+Pesquisei sort e depois toSorted para não aletrar o original.
+toSorted usa dois parâmetros: a e b e os compara subrtaindo.
+Se reuslta um valor negativo, a vem primeiro.
+Se resulta valor positivo, b vem primeiro.
+Se resulta zero ou NaN, a e b são iguais.
+
+
+★ Qual a estrutura da função sort?
+
+○ Quais parâmetros pode receber?
+
+○ A função tem algum valor de retorno ou não?
+
+○ A função modifica o array passado ou cria um novo array ordenado? 
+Cria um novo array. pra nao modificar, tem que usar toSorted().
+
+★ Como a função sort funciona para strings e números?
+
+★ Explicar como resolveu o desafio passo a passo.

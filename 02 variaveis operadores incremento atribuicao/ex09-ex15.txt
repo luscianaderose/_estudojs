@@ -1,0 +1,39 @@
+Explique com suas palavras. (use um arquivo .txt para colocar as respostas)
+9. O que são as variáveis?
+São lugares reservados na memória do computador para guardar valores.
+
+10. Para que serve o operador aritmético % ?
+Para calcular o resto da divisão.
+
+11. Para que serve o prompt?
+Para abrir uma janela.
+
+12. Para que serve o operador + no JavaScript e quais são suas particularidades?
+Para calcular soma ou concatenar valores. Quando se usa com um valor de número 
+inteiro e um string, os valores são concatenados, expressos juntos, um ao lado do outro.
+
+13. Considere o código abaixo para responder a pergunta:
+var value1 = 10
+var value2 = 5
+var sum = value1 + value2
+console.log(sum++)
+a. Qual valor será impresso ? 
+A soma é 15; não somou mais um porque a operação 
+aconteceu na mesma linha à solicitação do valor.
+
+14. Considere o código abaixo para responder a pergunta:
+var value1 = 11
+var value2 = 5
+var result = value1 % value2
+console.log(--result)
+a. Qual valor será impresso ? 
+A resposta é 0 porque a variável reuslt no console.log usou operador foi pré-fixado 
+então houve um decremento de 1 no valor da var result que é 1.
+
+15. Considere o código abaixo para responder a pergunta:
+var value1 = 11
+var value2 = 5
+value1+=value2
+console.log(value1)
+a. Qual valor será impresso ?
+O valor impresso é 16 porque value1 recebe value1 que é 11 mais value2 que é 5.

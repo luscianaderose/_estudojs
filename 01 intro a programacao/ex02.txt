@@ -1,0 +1,9 @@
+2. Escreva um algoritmo em linguagem natural que pegue dois números e informe qual 
+é o maior. 
+(Escreva seu algoritmo em bloco de notas)
+
+- Pegar primeiro número.
+- Pegar segundo número.
+- Se o primeiro número for o maior e diferente que o segundo número, 
+exibir o primeiro número.
+- Se não, exibir o segundo número.
