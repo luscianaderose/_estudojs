@@ -1,12 +1,4 @@
-// JavaScript Array SORT() https://www.w3schools.com/jsref/jsref_sort.asp
-// Create an Array
-const fruitsA = ["Banana", "Orange", "Apple", "Mango"]
 
-// Sort the Array
-fruitsA.sort()
-
-// Display the Array
-console.log('- fruitsA original foi modificado: ', fruitsA)
 
 //////////////////////////////////////////////////////////
 //Sort Decending
