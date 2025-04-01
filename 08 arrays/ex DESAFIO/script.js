@@ -80,36 +80,42 @@ function ordenarProdutos(array, criterio){
     if (criterio === 'nome'){
         array.sort(
             function(a,b){
-                if(a[criterio] < b[criterio]) {
-                    return -1;
-                } else {
-                    return true
+                    if(a.nome < b.nome) {
+                        return -1
+                    } else if(a.nome > b.nome) {
+                        return 1
+                    } else {
+                        return 0
+                    }
                 }
-            }
         )
     }
 
     if (criterio === 'categoria'){
         array.sort(
             function(a,b){
-                if(a[criterio] < b[criterio]) {
-                    return -1;
-                } else {
-                    return true
+                    if(a.categoria < b.categoria) {
+                        return -1
+                    } else if(a.categoria > b.categoria) {
+                        return 1
+                    } else {
+                        return 0
+                    }
                 }
-            }
         )
     }
 
     if (criterio === 'preco'){
         array.sort(
             function(a,b){
-                if(a[criterio] - b[criterio]) {
-                    return -1;
-                } else {
-                    return true
+                    if(a[criterio] < b[criterio]) {
+                        return -1
+                    } else if(a[criterio] > b[criterio]) {
+                        return 1
+                    } else {
+                        return 0
+                    }
                 }
-            }
         )
     }
 
@@ -131,17 +137,19 @@ console.log('///////////////////////////////////////////////////////////////////
 console.log('Lista ORIGINAL de produtos: ', produtos)
 
 console.log('////////////////////////////////////////////////////////////////////////////')
-const produtosOrdenadosNome = ordenarProdutos(produtos, 'nome')
+let produtosOrdenadosNome = [...produtos]
+ordenarProdutos(produtosOrdenadosNome, 'nome')
 console.log('Produtos ordenados por NOME: ', produtosOrdenadosNome)
 
 console.log('////////////////////////////////////////////////////////////////////////////')
-const produtosOrdenadosCategoria = ordenarProdutos(produtos, 'categoria')
+let produtosOrdenadosCategoria = [...produtos]
+ordenarProdutos(produtosOrdenadosCategoria, 'categoria')
 console.log('Produtos ordenados por CATEGORIA: ', produtosOrdenadosCategoria)
 
 console.log('////////////////////////////////////////////////////////////////////////////')
-const produtosOrdenadosPreco = ordenarProdutos(produtos, 'preco')
+let produtosOrdenadosPreco = [...produtos]
+ordenarProdutos(produtosOrdenadosPreco, 'preço')
 console.log('Produtos ordenados por PREÇO: ', produtosOrdenadosPreco)
 
+
 console.log('////////////////////////////////////////////////////////////////////////////')
-const produtosOrdenadosPopularidade = ordenarProdutos(produtos, 'popularidade')
-console.log('Produtos ordenados por POPULARIDADE: ', produtosOrdenadosPopularidade)
