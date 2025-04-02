@@ -29,7 +29,7 @@
 // Você deve criar uma função que permita ordenar os produtos conforme a necessidade do momento.
 
 // O que deve ser feito?
-// OK ★ Criar um array de produtos com nome, categoria, preço e popularidade.
+// ★ Criar um array de produtos com nome, categoria, preço e popularidade.
 // ★ Implementar uma função que receba um critério de ordenação e organize os produtos dinamicamente.
 // ★ Exibir a lista antes e depois da ordenação.
 
