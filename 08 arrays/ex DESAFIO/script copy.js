@@ -76,16 +76,30 @@ const produtos = [
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+function ordenarProdutos(array, criterio){
+    return [...array].sort((a,b) => {
+            if (a[criterio] < b[criterio]) return -1
+            if (a[criterio] > b[criterio]) return 1
+            return 0
+        }
+    )
+}
 
-const produtosOrdenadosPreco = produtos.toSorted((a, b) => a.preco - b.preco)
+console.log('////////////////////////////////////////////////////////////////////////////')
+console.log('Lista ORIGINAL de produtos: ', produtos)
 
-const produtosOrdenadosNome = produtos.toSorted((a, b) => b.preco - a.preco)
+console.log('////////////////////////////////////////////////////////////////////////////')
+const produtosOrdenadosNome = ordenarProdutos(produtos, 'nome')
+console.log('Produtos ordenados por NOME: ', produtosOrdenadosNome)
 
-// LISTA ANTES DA ORDENAÇÃO
-console.log('Produtos - original: ', produtos)
+console.log('////////////////////////////////////////////////////////////////////////////')
+const produtosOrdenadosCategoria = ordenarProdutos(produtos, 'categoria')
+console.log('Produtos ordenados por CATEGORIA: ', produtosOrdenadosCategoria)
 
-// LISTA DEPOIS DA ORDENAÇÃO
-console.log('Produtos ordenados por preço: ', produtosOrdenadosPreco)
+console.log('////////////////////////////////////////////////////////////////////////////')
+const produtosOrdenadosPreco = ordenarProdutos(produtos, 'preco')
+console.log('Produtos ordenados por PREÇO: ', produtosOrdenadosPreco)
 
-
-
+console.log('////////////////////////////////////////////////////////////////////////////')
+const produtosOrdenadosPopularidade = ordenarProdutos(produtos, 'popularidade')
+console.log('Produtos ordenados por POPULARIDADE: ', produtosOrdenadosPopularidade)

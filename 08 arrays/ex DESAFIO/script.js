@@ -80,9 +80,9 @@ function ordenarProdutos(array, criterio){
     if (criterio === 'nome'){
         array.sort(
             function(a,b){
-                    if(a.nome < b.nome) {
+                    if(a[criterio] < b[criterio]) {
                         return -1
-                    } else if(a.nome > b.nome) {
+                    } else if(a[criterio] > b[criterio]) {
                         return 1
                     } else {
                         return 0
@@ -94,9 +94,9 @@ function ordenarProdutos(array, criterio){
     if (criterio === 'categoria'){
         array.sort(
             function(a,b){
-                    if(a.categoria < b.categoria) {
+                    if(a[criterio] < b[criterio]) {
                         return -1
-                    } else if(a.categoria > b.categoria) {
+                    } else if(a[criterio] > b[criterio]) {
                         return 1
                     } else {
                         return 0
@@ -122,12 +122,14 @@ function ordenarProdutos(array, criterio){
     if (criterio === 'popularidade'){
         array.sort(
             function(a,b){
-                if(a[criterio] - b[criterio]) {
-                    return -1;
-                } else {
-                    return true
+                    if(a[criterio] < b[criterio]) {
+                        return -1
+                    } else if(a[criterio] > b[criterio]) {
+                        return 1
+                    } else {
+                        return 0
+                    }
                 }
-            }
         )
     }
 
@@ -148,8 +150,10 @@ console.log('Produtos ordenados por CATEGORIA: ', produtosOrdenadosCategoria)
 
 console.log('////////////////////////////////////////////////////////////////////////////')
 let produtosOrdenadosPreco = [...produtos]
-ordenarProdutos(produtosOrdenadosPreco, 'preço')
+ordenarProdutos(produtosOrdenadosPreco, 'preco')
 console.log('Produtos ordenados por PREÇO: ', produtosOrdenadosPreco)
 
-
 console.log('////////////////////////////////////////////////////////////////////////////')
+let produtosOrdenadosPopularidade = [...produtos]
+ordenarProdutos(produtosOrdenadosPopularidade, 'popularidade')
+console.log('Produtos ordenados por POPULARIDADE: ', produtosOrdenadosPopularidade)
