@@ -44,10 +44,10 @@
 // Exemplo de entrada e saída
 
 const produtos = [
-    { nome: "Arroz", categoria: "alimentos", preco: 20, popularidade: 500 },
+    { nome: "arroz", categoria: "alimentos", preco: 20, popularidade: 500 },
     { nome: "Sabonete", categoria: "higiene", preco: 5, popularidade: 300 },
     { nome: "Refrigerante", categoria: "bebidas", preco: 8, popularidade: 800 },
-    { nome: "Feijão", categoria: "alimentos", preco: 12, popularidade: 600 },
+    { nome: "feijão", categoria: "alimentos", preco: 12, popularidade: 600 },
     { nome: "Cerveja", categoria: "bebidas", preco: 10, popularidade: 1000 }
 ]
 

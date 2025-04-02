@@ -77,4 +77,6 @@ function ordenarProdutos(array, criterio){
 A nova solução já começa criando a cópia automaticamente sem precisar fazer em cada um dos 4 blocos finais.
 A arrow function é usada, também economizando espaço. A condicional IF é usada após a função sort 
 para que não precise repetí-la. Não é preciso criar 4 blocos dentro da função 
-porque este único bloco funciona para todas as propriedades.
+porque este único bloco funciona para todas as propriedades. 
+
+Ainda é preciso tratar o problema das letras maúsculas.
