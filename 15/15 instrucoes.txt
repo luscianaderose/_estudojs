@@ -1,0 +1,34 @@
+x1. Adicione um event listener no elemento com o ID "exemplo" para que, quando ele for clicado, 
+o conteúdo seja alterado para "Elemento clicado!".
+2. Adicione um event listener no elemento com o ID "caixa" para que, quando o mouse passar sobre o elemento,
+ a cor de fundo seja alterada para vermelho.
+3. Adicione um event listener a todos os itens da lista (com a classe "item") para que, quando qualquer item for clicado, um alerta apareça com o texto
+"Você clicou no item X" (onde X é o número do item).
+4. Adicione um event listener no campo de entrada com o ID "campo" para que, quando o campo perder o foco (evento blur), o valor do campo seja
+alterado para "Campo alterado por foco".
+5. Adicione um event listener no botão com o ID "remover" para que, quando o botão for clicado, o elemento com o ID "caixa" seja removido do DOM.
+6. Adicione um event listener no parágrafo com o ID "textoSubstituir" para que, quando ele for clicado, o texto seja alterado para "Texto alterado por
+clique".
+7. Adicione um event listener no parágrafo com a classe "paragrafo" para que, quando o mouse passar sobre o parágrafo, a cor do texto seja alterada para
+azul.
+8. Crie um novo botão com o texto "Adicionar Item" e adicione um event listener a ele para que, quando o botão for clicado, um novo item seja adicionado
+à lista "lista" com o texto "Novo Item".
+9. Adicione um formulário com o campo de entrada "campo". Adicione um event listener ao formulário para que, ao ser enviado, um alerta seja exibido
+com o valor atual do campo de entrada.
+10. Adicione um event listener a todos os itens da lista. Quando um item for clicado, altere o estilo do elemento com o ID "caixa", alterando sua cor de fundo
+para verde.
+11. Adicione um event listener ao parágrafo com o ID "textoSubstituir" para que, enquanto o mouse estiver sobre o parágrafo (evento mousemove), o texto seja
+alterado para "Texto alterado por movimento".
+12. Adicione um event listener no campo de entrada com o ID "campo" para que, enquanto o usuário digitar algo no campo, o valor seja alterado para "Texto
+digitado: X", onde X é o valor digitado.
+13. Adicione um event listener ao elemento com o ID "caixa2" para que, quando o mouse passar sobre ele, uma mensagem de alerta seja exibida com o texto
+"Você está passando o mouse sobre a caixa 2!".
+14. Adicione um event listener para cada item da lista. Quando um item for clicado, adicione um novo item ao final da lista com o texto "Novo item adicionado!".
+15. Adicione um event listener a todos os itens da lista "lista". Quando um item for clicado, altere o estilo do item clicado para que a cor de fundo seja amarela.
+16. Adicione um event listener no campo de entrada para detectar quando uma tecla for pressionada. Quando uma tecla for pressionada, mostre uma mensagem
+de alerta com o código da tecla pressionada.
+17. Adicione um event listener ao parágrafo com o ID "textoSubstituir". Quando o parágrafo for clicado, altere o texto para "Texto substituído por clique".
+18. Adicione um event listener no botão de ID "remover" para que, ao ser clicado, a cor de fundo do botão seja alterada para vermelho.
+19. Adicione um event listener para cada parágrafo com a classe "paragrafo". Quando qualquer parágrafo for clicado, altere a cor de fundo do parágrafo para
+cinza.
+20. Adicione um event listener para todos os parágrafos. Quando o mouse passar sobre qualquer parágrafo, altere o tamanho da fonte para 20px.

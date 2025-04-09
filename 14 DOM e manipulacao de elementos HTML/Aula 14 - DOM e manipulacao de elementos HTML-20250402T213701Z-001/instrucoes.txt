@@ -1,0 +1,31 @@
+x1. Altere o conteúdo do elemento com o ID "exemplo" para "Texto alterado!".
+x2. Altere o texto de todos os elementos com a classe "item" para "Alterado".
+x3. Altere o conteúdo do primeiro parágrafo (com a classe "paragrafo") para "Primeiro parágrafo alterado".
+x4. Altere o estilo do elemento com o ID "caixa" para ter cor de fundo azul e largura de 400px.
+x5. Altere o valor do campo de entrada com o ID "campo" para "Novo valor".
+x6. Crie um novo item <li> com a classe "item" e adicione-o à lista com o ID "lista".
+x7. Crie um novo item <li> e insira-o antes do primeiro item da lista "lista".
+8. Altere o texto do parágrafo com o ID "textoSubstituir" para "Texto substituído com sucesso!".
+9. Altere o estilo do elemento com o ID "caixa" para que sua cor de fundo seja verde e sua altura seja 200px.
+10. Adicione uma nova classe "destacado" ao elemento com o ID "caixa".
+11. Remova o elemento com o ID "caixa2" do DOM.
+12. Substitua o conteúdo do parágrafo com o ID "textoSubstituir" por "Texto completamente novo".
+13. Crie e adicione 5 itens <li> à lista "lista".
+14. Altere o valor do campo de entrada com o ID "campo" para "Campo alterado".
+15. Adicione um estilo inline ao elemento com o ID "caixa" que defina sua altura como 100px e largura como 250px.
+16. Crie um novo elemento <ul>, adicione alguns itens <li> a ele, e insira o <ul> dentro do parágrafo com a classe "paragrafo".
+17. Altere a cor do texto de todos os parágrafos (com a classe "paragrafo") para vermelho.
+18. Altere o tamanho da fonte do parágrafo com o ID "textoSubstituir" para 20px.
+19. Substitua o elemento com o ID "caixa" pelo elemento com o ID "caixa2" usando o método replaceChild.
+20. Crie um novo parágrafo e insira-o dentro do elemento com o ID "caixa2".
+
+
+
+
+const novoPrimeiroItem = document.createElement('li')
+novoPrimeiroItem.textContent = 'Novo primeiro item'
+
+const lista = document.getElementById('lista')
+const primeiroItem = lista.firstElementChild
+
+lista.insertBefore(novoElemento, primeiroItem)
