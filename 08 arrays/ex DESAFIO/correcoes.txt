@@ -1,0 +1,51 @@
+>>> Não explicou como a função funciona, só descreve como podemos chamá-la no código!
+Como é feita a comparação??
+
+★ Como a função sort funciona para strings e números?
+_Para strings, basta escrever o nome do array e em seguida aplicar a dunção sort.
+Exemplo:
+const fruits = ["Banana", "Orange", "Apple", "Mango"]
+fruits.sort() // saída: ["Apple", "Banana", "Mango", "Orange"]
+
+_Para números, é preciso usar a comparação descrita na última resposta.
+Exemplo:
+const points = [40, 100, 1, 5, 25, 10]
+points.sort(function(a, b){return a-b}) // saída: [ 1, 5, 10, 25, 40, 100 ]
+A função compara todos os elementos e os retorna ordenados.
+
+--------
+
+> Aqui não está claro como a comparação é feita e como se obtém os valores negativo, positivo e zero!
+
+★ Explicar como resolveu o desafio passo a passo.
+_Pesquisei a função sort. Essa função usa dois parâmetros: a e b e os compara 
+com operadores relacionais ou com operador aritimético de subtração.
+Se resulta um valor negativo ou é menor, o parâmetro 'a' vem primeiro.
+Se resulta valor positivo ou é maior, o parâmetro 'b' vem primeiro.
+Se resulta zero ou NaN, a e b são iguais.
+O array é ordenado 'por debaixo dos panos' percorrendo todos os elementos dos objetos
+criando a ordenação comparando valores de dois em dois.
+
+---------
+
+No final, o seguinte bloco se repete para cada propriedade dos objetos:
+Criei uma cópia do array para não modificar o original em uma nova varável 'produtosOrdenados' 
+declarada como let. (POR QUAL RAZÃO DECLAROU COMO LET? QUAL MOTIVO?)
+Apliquei a função colocando essa variável e o criterio nos parâmetros.
+Imprimi.
+
+        let produtosOrdenadosNome = [...produtos]
+        ordenarProdutos(produtosOrdenadosNome, 'nome')
+        console.log('Produtos ordenados por NOME: ', produtosOrdenadosNome)
+
+Depois foi possível desenvolver uma função muito menor com sugestões do Chat GPT.
+A solução abaixo não foi simplesmente copiada. 
+
+----------
+
+> Qual o é o problema de letras maiusculas e por que ele acontece??
+
+
+> Aqui tá errado
+○ Quais parâmetros pode receber?
+_Pode receber dois parâmetros que vai usar pra comparar.

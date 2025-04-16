@@ -1,0 +1,113 @@
+★ Qual a estrutura da função sort?
+
+*>>> Aqui tá errado
+○ Quais parâmetros pode receber?
+_A função sort aceita um parâmetro que pode ser uma função para executar uma ordenação customizada.
+
+○ A função tem algum valor de retorno ou não?
+_Sim, a função retorna o array original modificado.
+
+○ A função modifica o array passado ou cria um novo array ordenado? 
+_A função modifica o array passado. 
+
+
+*>>> Não explicou como a função funciona, só descreve como podemos chamá-la no código!
+Como é feita a comparação??
+
+★ Como a função sort funciona para strings e números?
+Sort ordena alfabeticamente seus elementos e em ordem crescente.
+A função compara todos os elementos e os retorna ordenados.
+
+_Para strings, a função sort funciona bem. 
+Ordena strings começados com 'a' antes de strings com 'b', e assim sucessivamente. 
+Para utilizar, basta digitar o nome do array e em seguida aplicar a função sort. 
+Exemplo:
+const fruits = ["Banana", "Orange", "Apple", "Mango"]
+fruits.sort() // saída: ["Apple", "Banana", "Mango", "Orange"]
+
+_Para números, não funciona tão bem porque trata o número 20 como maior do que 100 porque 2 é maior que 1.
+Para contornar esse problema, é necessário usar uma função de comparação como parametro da sort.
+Esta função de comparação analisa de dois em dois valores  
+usando os parâmetros 'a' e 'b' e os compara fazendo 'a - b' e 'b - a' ou 'a < b' e 'b - a'. 
+Então '20 - 100' resulta em -80, valor negativo, ou 20 é menor que 100.
+Se resulta em um valor negativo ou é 'menor que', o parâmetro 'a' vem primeiro.
+Se resulta em valor positivo ou é 'maior que', o parâmetro 'b' vem primeiro.
+Se resulta zero ou NaN, 'a' e 'b' são iguais.
+Esses resultados produzem cálcuos 'por debaixo dos panos' percorrendo todos os elementos dos objetos
+modificando a ordenação. O resultado da comparação coloca o elemento mais 
+a frente ou atrás no array.
+
+
+Para utilizar, 
+Exemplo:
+const points = [40, 100, 1, 5, 25, 10]
+points.sort(function(a, b){return a-b}) // saída: [ 1, 5, 10, 25, 40, 100 ]
+
+
+
+*>>> Aqui não está claro como a comparação é feita e como se obtém os valores negativo, positivo e zero!
+
+★ Explicar como resolveu o desafio passo a passo.
+_Pesquisei a função sort. Usei como parâmetro uma função de comparação 
+que ordena corretamente os elementos numéricos. 
+
+Usei a condicional IF para avaliar qual critério está sendo utilizado.
+Depois, apliquei a função sort no array.
+
+A princípio, criei uma oslução utilizando muitas linhas em 4 blocos.
+Cada bloco se repete 4 vezes, uma para cada propriedade dos objetos: nome, preço, categoria e popularidade.
+
+O parâmetro critério é usado entre colchetes após o parâmtro 'a' e o 'b' 
+para conseguir passar a propriedade escolhida para ordenação.
+
+        function ordenarProdutos(array, criterio){
+            if (criterio === 'nome'){
+                array.sort(
+                    function(a,b){
+                            if(a[criterio] < b[criterio]) {
+                                return -1
+                            } else if(a[criterio] > b[criterio]) {
+                                return 1
+                            } else {
+                                return 0
+                            }
+                        }
+                )
+            }
+        (...)}
+
+No final, o seguinte bloco se repete para cada propriedade dos objetos:
+A função sort subescreve a array original. Por isso, é preciso criar uma cópia. 
+Criei uma cópia do array em uma nova varável 'produtosOrdenados'. 
+
+*>>>(POR QUAL RAZÃO DECLAROU COMO LET? QUAL MOTIVO?)
+Esta cópia é declarada como const porque, apesar de seu conteúdo ser modificado 
+devido a nova ordenação, o array pode ser alterado em uma variável declarada como const.
+
+
+Apliquei a função colocando essa variável e o critério nos parâmetros.
+Imprimi.
+
+        const produtosOrdenadosNome = [...produtos]
+        ordenarProdutos(produtosOrdenadosNome, 'nome')
+        console.log('Produtos ordenados por NOME: ', produtosOrdenadosNome)
+
+Depois foi possível desenvolver uma função muito menor com sugestões do Chat GPT.
+A solução abaixo não foi simplesmente copiada. 
+
+function ordenarProdutos(array, criterio){
+    return [...array].sort((a,b) => {
+            if (a[criterio] < b[criterio]) return -1
+            if (a[criterio] > b[criterio]) return 1
+            return 0
+        }
+    )
+}
+
+A nova solução já começa criando a cópia automaticamente sem precisar fazer em cada um dos 4 blocos finais.
+A arrow function é usada, também economizando espaço. A condicional IF é usada após a função sort 
+para que não precise repetí-la. Não é preciso criar 4 blocos dentro da função 
+porque este único bloco funciona para todas as propriedades. 
+
+>>> Qual o é o problema de letras maiusculas e por que ele acontece??
+Ainda é preciso tratar o problema das letras maúsculas.

@@ -44,10 +44,10 @@
 // Exemplo de entrada e saída
 
 const produtos = [
-    { nome: "Arroz", categoria: "alimentos", preco: 20, popularidade: 500 },
+    { nome: "arroz", categoria: "alimentos", preco: 20, popularidade: 500 },
     { nome: "Sabonete", categoria: "higiene", preco: 5, popularidade: 300 },
     { nome: "Refrigerante", categoria: "bebidas", preco: 8, popularidade: 800 },
-    { nome: "Feijão", categoria: "alimentos", preco: 12, popularidade: 600 },
+    { nome: "feijão", categoria: "alimentos", preco: 12, popularidade: 600 },
     { nome: "Cerveja", categoria: "bebidas", preco: 10, popularidade: 1000 }
 ]
 
@@ -77,83 +77,29 @@ const produtos = [
 ////////////////////////////////////////////////////////////////////////////////
 
 function ordenarProdutos(array, criterio){
-    if (criterio === 'nome'){
-        array.sort(
-            function(a,b){
-                    if(a[criterio] < b[criterio]) {
-                        return -1
-                    } else if(a[criterio] > b[criterio]) {
-                        return 1
-                    } else {
-                        return 0
-                    }
-                }
-        )
-    }
-
-    if (criterio === 'categoria'){
-        array.sort(
-            function(a,b){
-                    if(a[criterio] < b[criterio]) {
-                        return -1
-                    } else if(a[criterio] > b[criterio]) {
-                        return 1
-                    } else {
-                        return 0
-                    }
-                }
-        )
-    }
-
-    if (criterio === 'preco'){
-        array.sort(
-            function(a,b){
-                    if(a[criterio] < b[criterio]) {
-                        return -1
-                    } else if(a[criterio] > b[criterio]) {
-                        return 1
-                    } else {
-                        return 0
-                    }
-                }
-        )
-    }
-
-    if (criterio === 'popularidade'){
-        array.sort(
-            function(a,b){
-                    if(a[criterio] < b[criterio]) {
-                        return -1
-                    } else if(a[criterio] > b[criterio]) {
-                        return 1
-                    } else {
-                        return 0
-                    }
-                }
-        )
-    }
-
+    return [...array].sort((a,b) => {
+            if (a[criterio] < b[criterio]) return -1
+            if (a[criterio] > b[criterio]) return 1
+            return 0
+        }
+    )
 }
 
 console.log('////////////////////////////////////////////////////////////////////////////')
 console.log('Lista ORIGINAL de produtos: ', produtos)
 
 console.log('////////////////////////////////////////////////////////////////////////////')
-let produtosOrdenadosNome = [...produtos]
-ordenarProdutos(produtosOrdenadosNome, 'nome')
+const produtosOrdenadosNome = ordenarProdutos(produtos, 'nome')
 console.log('Produtos ordenados por NOME: ', produtosOrdenadosNome)
 
 console.log('////////////////////////////////////////////////////////////////////////////')
-let produtosOrdenadosCategoria = [...produtos]
-ordenarProdutos(produtosOrdenadosCategoria, 'categoria')
+const produtosOrdenadosCategoria = ordenarProdutos(produtos, 'categoria')
 console.log('Produtos ordenados por CATEGORIA: ', produtosOrdenadosCategoria)
 
 console.log('////////////////////////////////////////////////////////////////////////////')
-let produtosOrdenadosPreco = [...produtos]
-ordenarProdutos(produtosOrdenadosPreco, 'preco')
+const produtosOrdenadosPreco = ordenarProdutos(produtos, 'preco')
 console.log('Produtos ordenados por PREÇO: ', produtosOrdenadosPreco)
 
 console.log('////////////////////////////////////////////////////////////////////////////')
-let produtosOrdenadosPopularidade = [...produtos]
-ordenarProdutos(produtosOrdenadosPopularidade, 'popularidade')
+const produtosOrdenadosPopularidade = ordenarProdutos(produtos, 'popularidade')
 console.log('Produtos ordenados por POPULARIDADE: ', produtosOrdenadosPopularidade)

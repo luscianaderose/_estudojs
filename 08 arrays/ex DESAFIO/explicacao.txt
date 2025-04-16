@@ -1,4 +1,6 @@
 ★ Qual a estrutura da função sort?
+
+>>> Aqui tá errado
 ○ Quais parâmetros pode receber?
 _Pode receber dois parâmetros que vai usar pra comparar.
 
@@ -8,8 +10,12 @@ _Sim, a função retorna o array original modificado.
 ○ A função modifica o array passado ou cria um novo array ordenado? 
 _A função modifica o array passado. 
 
+
+>>> Não explicou como a função funciona, só descreve como podemos chamá-la no código!
+Como é feita a comparação??
+
 ★ Como a função sort funciona para strings e números?
-_Para strings, basta escrever o nome do array e em seguida aplicar a dunção sort.
+_Para strings, basta escrever o nome do array e em seguida aplicar a função sort.
 Exemplo:
 const fruits = ["Banana", "Orange", "Apple", "Mango"]
 fruits.sort() // saída: ["Apple", "Banana", "Mango", "Orange"]
@@ -19,6 +25,9 @@ Exemplo:
 const points = [40, 100, 1, 5, 25, 10]
 points.sort(function(a, b){return a-b}) // saída: [ 1, 5, 10, 25, 40, 100 ]
 A função compara todos os elementos e os retorna ordenados.
+
+
+>>> Aqui não está claro como a comparação é feita e como se obtém os valores negativo, positivo e zero!
 
 ★ Explicar como resolveu o desafio passo a passo.
 _Pesquisei a função sort. Essa função usa dois parâmetros: a e b e os compara 
@@ -55,6 +64,10 @@ para conseguir pegar todas as propriedades dos objetos.
 No final, o seguinte bloco se repete para cada propriedade dos objetos:
 Criei uma cópia do array para não modificar o original em uma nova varável 'produtosOrdenados' 
 declarada como let.
+
+>>>(POR QUAL RAZÃO DECLAROU COMO LET? QUAL MOTIVO?)
+
+
 Apliquei a função colocando essa variável e o criterio nos parâmetros.
 Imprimi.
 
@@ -79,4 +92,5 @@ A arrow function é usada, também economizando espaço. A condicional IF é usa
 para que não precise repetí-la. Não é preciso criar 4 blocos dentro da função 
 porque este único bloco funciona para todas as propriedades. 
 
+>>> Qual o é o problema de letras maiusculas e por que ele acontece??
 Ainda é preciso tratar o problema das letras maúsculas.
