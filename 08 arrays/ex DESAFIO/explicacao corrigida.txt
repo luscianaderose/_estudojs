@@ -28,7 +28,7 @@ fruits.sort() // saída: ["Apple", "Banana", "Mango", "Orange"]
 _Para números, não funciona tão bem porque trata o número 20 como maior do que 100 porque 2 é maior que 1.
 Para contornar esse problema, é necessário usar uma função de comparação como parametro da sort.
 Esta função de comparação analisa de dois em dois valores  
-usando os parâmetros 'a' e 'b' e os compara fazendo 'a - b' e 'b - a' ou 'a < b' e 'b - a'. 
+usando os parâmetros 'a' e 'b' e os compara fazendo 'a - b' e 'b - a' ou 'a < b' e 'b < a'. 
 Então '20 - 100' resulta em -80, valor negativo, ou 20 é menor que 100.
 Se resulta em um valor negativo ou é 'menor que', o parâmetro 'a' vem primeiro.
 Se resulta em valor positivo ou é 'maior que', o parâmetro 'b' vem primeiro.
