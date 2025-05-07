@@ -1,3 +1,6 @@
+//1. Adicione um event listener no elemento com o ID "exemplo" para que, 
+// quando ele for clicado, o conteúdo seja alterado para "Elemento clicado!".
+
 const divExemplo = document.getElementById('exemplo')
 
 // uma maneira
@@ -35,3 +38,8 @@ for(let i = 0; i < 3; i++){
         this.textContent = `Você clicou no item ${i + 1}`
     })
 }
+
+//4. Adicione um event listener no campo de entrada com o ID "campo" para que, 
+// quando o campo perder o foco (evento blur), o valor do campo seja
+// alterado para "Campo alterado por foco".
+

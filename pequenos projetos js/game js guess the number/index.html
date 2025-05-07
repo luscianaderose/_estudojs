@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guessing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            padding: 20px;
+        }
+        .game-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #guess-input {
+            padding: 8px;
+            font-size: 16px;
+            width: 60px;
+        }
+        #guess-btn {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #guess-btn:hover {
+            background-color: #45a049;
+        }
+        #message {
+            margin: 15px 0;
+            font-size: 18px;
+            min-height: 24px;
+        }
+        #attempts {
+            font-weight: bold;
+            color: #ff5722;
+        }
+        .hint {
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Guess the Number!</h1>
+        <p>I'm thinking of a number between 1 and 100.</p>
+        <p>Can you guess what it is?</p>
+        
+        <input type="number" id="guess-input" min="1" max="100">
+        <button id="guess-btn">Guess</button>
+        
+        <div id="message"></div>
+        <p>Guesses: <span id="attempts">0</span></p>
+        <p class="hint">Type your guess and press the button or hit Enter</p>
+    </div>
+
+    <script>
+        // Game variables
+        let secretNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+        const maxAttempts = 10;
+
+        // DOM elements
+        const guessInput = document.getElementById('guess-input');
+        const guessBtn = document.getElementById('guess-btn');
+        const messageEl = document.getElementById('message');
+        const attemptsEl = document.getElementById('attempts');
+
+        // Start a new game
+        function newGame() {
+            secretNumber = Math.floor(Math.random() * 100) + 1;
+            attempts = 0;
+            attemptsEl.textContent = attempts;
+            messageEl.textContent = '';
+            guessInput.value = '';
+            guessInput.focus();
+            console.log('Psst... the secret number is', secretNumber); // Cheat mode!
+        }
+
+        // Check the player's guess
+        function checkGuess() {
+            const guess = parseInt(guessInput.value);
+            
+            if (isNaN(guess) || guess < 1 || guess > 100) {
+                messageEl.textContent = 'Please enter a valid number between 1 and 100!';
+                return;
+            }
+
+            attempts++;
+            attemptsEl.textContent = attempts;
+
+            if (guess === secretNumber) {
+                messageEl.innerHTML = `🎉 <strong>Congratulations!</strong> You guessed the number in ${attempts} attempts!`;
+                setTimeout(newGame, 3000);
+            } else if (attempts >= maxAttempts) {
+                messageEl.innerHTML = `😢 Game over! The number was <strong>${secretNumber}</strong>.`;
+                setTimeout(newGame, 3000);
+            } else {
+                messageEl.textContent = guess < secretNumber ? '⬆️ Too low!' : '⬇️ Too high!';
+                guessInput.value = '';
+                guessInput.focus();
+            }
+        }
+
+        // Event listeners
+        guessBtn.addEventListener('click', checkGuess);
+        guessInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkGuess();
+            }
+        });
+
+        // Initialize game
+        newGame();
+    </script>
+</body>
+</html>
