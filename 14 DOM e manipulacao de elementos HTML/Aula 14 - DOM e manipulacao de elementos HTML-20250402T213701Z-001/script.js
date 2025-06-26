@@ -87,6 +87,12 @@ for(let i = 0; i < 4; i++){
 const paragrafo3 = document.getElementByClassName('paragrafo')
 
 // 17. Altere a cor do texto de todos os parágrafos (com a classe "paragrafo") para vermelho.
+const paragrafo1 = document.getElementsByClassName('paragrafo')
+
 // 18. Altere o tamanho da fonte do parágrafo com o ID "textoSubstituir" para 20px.
+
+
 // 19. Substitua o elemento com o ID "caixa" pelo elemento com o ID "caixa2" usando o método replaceChild.
+
+
 // 20. Crie um novo parágrafo e insira-o dentro do elemento com o ID "caixa2".
