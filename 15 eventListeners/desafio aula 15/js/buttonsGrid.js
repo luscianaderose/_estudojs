@@ -18,23 +18,23 @@ const innerHtmlArray = [1,2,3,6,9,8,7,4]
 
 // ESCREVER btn1.innerHTML = '4'
 
-// btn5.addEventListener('click', function(){
-//     console.log('btn5 clickado')
-//     this.style.backgroundColor = 'red'
-//     btn1.innerHTML = '4'
-// })
-
 btn5.addEventListener('click', function(){
     console.log('btn5 clickado')
     this.style.backgroundColor = 'red'
-    for(let i = 0; i < 9; i++){
-        idArray[i].innerHTML = `${innerHtmlArray[i]}`
-        console.log(`${idArray[i]}.innerHTML = '${innerHtmlArray[i]}'`)
-    }
+    btn1.innerHTML = '4'
 })
 
+// btn5.addEventListener('click', function(){
+//     console.log('btn5 clickado')
+//     this.style.backgroundColor = 'red'
+//     for(let i = 0; i < 9; i++){
+//         idArray[i].innerHTML = `${innerHtmlArray[i]}`
+//         console.log(`${idArray[i]}.innerHTML = '${innerHtmlArray[i]}'`)
+//     }
+// })
 
 
+//QUASE FUNCIONA
 // btn5.addEventListener('click', function(){
 //     console.log('btn5 clicado')
 //     this.style.backgroundColor = 'red'
