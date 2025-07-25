@@ -4,7 +4,7 @@
 const obj1 = { 
     nome: 'Ana', 
     ola: function hello(){
-        console.log('Meu nome é', this.nome, '.')
+        console.log(`Meu nome é ${this.nome}.`)
     } 
 }
 

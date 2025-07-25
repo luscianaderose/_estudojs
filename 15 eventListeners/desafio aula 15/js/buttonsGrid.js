@@ -8,13 +8,12 @@ const btn7 = document.getElementById('btn7')
 const btn8 = document.getElementById('btn8')
 const btn9 = document.getElementById('btn9')
 
-const idArray = ['btn1', 'btn2', 'btn3', 'btn4', 'btn6', 'btn7', 'btn8', 'btn9']
+const idArray = [btn1, btn2, btn3, btn6, btn9, btn8, btn7, btn4]
 const innerHtmlArray = ['1','2','3','6','9','8','7','4']
 
-//QUASE FUNCIONA
 btn5.addEventListener('click', function(){
     console.log('btn5 clicado')
-    this.style.backgroundColor = 'red'
+    // this.style.backgroundColor = 'red'
     console.log(innerHtmlArray)
     let ultimo = innerHtmlArray[innerHtmlArray.length - 1]
     console.log(ultimo)
@@ -22,9 +21,11 @@ btn5.addEventListener('click', function(){
     console.log(innerHtmlArray)
     innerHtmlArray.unshift(ultimo)
     console.log(innerHtmlArray)
+    // btn1.innerHTML = '4'
     for(let i = 0; i < 8; i++){
         idArray[i].innerHTML = innerHtmlArray[i]
         console.log(`${idArray[i]}.innerHTML = '${innerHtmlArray[i]}'`)
+        // console.log('for ', idArray[i].innerHTML = innerHtmlArray[i])
     }
 })
 
