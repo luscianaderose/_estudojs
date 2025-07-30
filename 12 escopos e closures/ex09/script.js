@@ -70,15 +70,32 @@
 // contar()
 // contar()
 ///////////////////////////////////////////////////////////////////
-let cont = 0
 
-function contar(){
-    return  {contar:function contar(){
+// function contar(){
+//     let cont = 0
+//     return  {con:function con(){
+//                         cont++
+//                         return cont
+//             }}
+// }
+
+// contar()
+// contar()
+///////////////////////////////////////////////////////////////////
+
+function contador(){
+    let cont = 0
+    // console.log('a')
+    return  function (){
+            // console.log('b')
                 cont++
-                console.log(cont)
-            }}
+                return console.log(cont) //console.log('c ', cont)
+            }
 }
 
+const contar = contador()
+contar()
+contar()
 contar()
 contar()
 
