@@ -1,5 +1,5 @@
-// Crie uma função contador que retorne outra função. Cada vez que a função
-// retornada for chamada, ela deve incrementar e exibir um contador.
+// Crie uma função contador que retorne outra função. 
+// Cada vez que a função retornada for chamada, ela deve incrementar e exibir um contador.
 // Exemplo de uso
 // const contar = contador()
 // contar() // 1
@@ -89,7 +89,7 @@ function contador(){
     return  function (){
             // console.log('b')
                 cont++
-                return console.log(cont) //console.log('c ', cont)
+                console.log(cont) //console.log('c ', cont)
             }
 }
 
