@@ -6,8 +6,8 @@ class ConversorTemperatura {
         this.num = num
     }
 
-    paraF() { return (this.num * 1.8) + 32 } //F = (C * 1.8) + 32
-    paraC() { return (this.num - 32) / 1,8} //C = (F - 32) / 1,8
+    paraF() { return ((this.num * 1.8) + 32) } //F = (C * 1.8) + 32
+    paraC() { return ((this.num - 32) / 1.8) } //C = (F - 32) / 1.8
 }
 
 const temp = new ConversorTemperatura(25)

@@ -26,7 +26,7 @@ class CalendarHelper{
 }
 
 //Exemplos de uso da classe
-// const calendar = new CalendarHelper ()
-// console.log(calendar. getDayName ("2024-08-05" )) // Deve imprimir: "Monday"
-// console.log(calendar. isWeekend("2024-08-03" )) // true (sábado)
-// console.log(calendar. isWeekend("2024-08-05" )) // false (segunda-feira)
+// const calendar = new CalendarHelper()
+// console.log(calendar.getDayName ("2024-08-05")) // Deve imprimir: "Monday"
+// console.log(calendar.isWeekend("2024-08-03")) // true (sábado)
+// console.log(calendar.isWeekend("2024-08-05")) // false (segunda-feira)

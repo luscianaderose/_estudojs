@@ -14,10 +14,10 @@ class Calculadora {
 }
 
 const calculadora = new Calculadora(4, 2)
-console.log(calculadora.somar())
-console.log(calculadora.subtrair())
-console.log(calculadora.multiplicar())
-console.log(calculadora.dividir())
+console.log('somar ', calculadora.somar())
+console.log('subtrair ', calculadora.subtrair())
+console.log('multiplicar ', calculadora.multiplicar())
+console.log('dividir ', calculadora.dividir())
 
 
 

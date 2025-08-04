@@ -18,9 +18,9 @@ class ContaBancaria {
 }
 
 const contaBancaria = new ContaBancaria(123, 500, 'Joana')
-console.log(contaBancaria.apresentar())
-console.log(contaBancaria.depositar(200))
-console.log(contaBancaria.sacar(300))
-console.log(contaBancaria.exibirSaldo())
+console.log('Dados da conta: ', contaBancaria.apresentar())
+console.log('Depositar 200: ', contaBancaria.depositar(200))
+console.log('Sacar 300: ', contaBancaria.sacar(300))
+console.log('Exibir saldo: ', contaBancaria.exibirSaldo())
 
 // como fazer o saldo continuar?

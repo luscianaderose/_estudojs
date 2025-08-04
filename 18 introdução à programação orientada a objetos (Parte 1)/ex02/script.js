@@ -8,10 +8,6 @@ class Pessoa {
         this.idade = idade
     }
 
-    // apresentar(){ 
-    //     return `${nome} tem gênero ${genero} e tem ${idade} anos.` 
-    // }
-
         apresentar(){ 
         return `${this.nome} tem gênero ${this.genero} e tem ${this.idade} anos.` 
     }
