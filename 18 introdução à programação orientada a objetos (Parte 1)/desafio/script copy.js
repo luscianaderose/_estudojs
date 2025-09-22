@@ -19,51 +19,31 @@
 
 
 class CalendarHelper{
-    constructor(dateString) {
+    construcotr(dateString) {
         this.dateString = dateString
     }
 
     getDayName(dateString) { 
+        const data = new Date(dateString)
         const diasDaSemana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
-        const data = new Date(dateString)
         const weekday = data.getDay()
-        return diasDaSemana[data.getDay()]
-    }
-
-    isWeekend(dateString) { 
-        const data = new Date(dateString)
-        const weekday = data.getDay()
-        let resposta
+        const weekdayFinal = diasDaSemana[weekday]
         
-        if (weekday === 0 || weekday === 6){
-            resposta = true
-            } else {
-            resposta = false
-            }
-
-        return resposta
+        //return dateString
+        return weekdayFinal
+        //return diasDaSemana[dateString.getDay()]
     }
 
-    // printWeekday(dateString) {
-    //     const data = new Date(dateString)
-    //     const weekday = data.getDay()
-    //     return weekday
+    // isWeekend(dateString) { 
+
+    //     return 
     // }
 }
-
-const dateString = "2025-09-13"
-const data = new Date(dateString)
-const weekday = data.getDay()
-console.log('weekday: ', weekday)
+//const dateString = prompt("Digite uma data: ")
 
 //Exemplos de uso da classe
 const calendar = new CalendarHelper()
-console.log('Dia da semana: ', calendar.getDayName("2025-09-13")) 
-console.log('É fds? ', calendar.isWeekend("2025-09-13"))
-
-console.log('Dia da semana: ', calendar.getDayName("2025-09-14")) 
-console.log('É fds? ', calendar.isWeekend("2025-09-14"))
-
-// console.log(printWeekday("2025-09-21"))
-// console.log(printWeekday("2025-09-22"))
-
+//console.log()
+console.log(calendar.getDayName("2025-09-22")) // Deve imprimir: "Monday"
+// console.log(calendar.isWeekend("2025-09-21")) // true (domingo)
+// console.log(calendar.isWeekend("2025-09-22")) // false (segunda-feira)

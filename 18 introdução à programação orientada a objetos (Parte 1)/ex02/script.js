@@ -2,14 +2,14 @@
 // método chamado "apresentar" que exiba uma mensagem com os dados da pessoa.
 
 class Pessoa {
-    constructor (nome, genero, idade){
+    constructor (nome, genero, idade) {
         this.nome = nome
         this.genero = genero
         this.idade = idade
     }
 
-        apresentar(){ 
-        return `${this.nome} tem gênero ${this.genero} e tem ${this.idade} anos.` 
+    apresentar() { 
+    return `${this.nome} tem gênero ${this.genero} e tem ${this.idade} anos.` 
     }
 
 }
