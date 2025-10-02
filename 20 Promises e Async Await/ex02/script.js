@@ -2,24 +2,14 @@
 // processar" após 3 segundos.
 // aula 20 slide 13
 
-const promessaComErro = new Promise((_, reject) => {
-    reject("Erro ao processar.")
-})
-
-promessaComErro
-    .then((res) => {
-        console.log("Sucesso:", res)
+function promessa(){
+    return new Promise((_, reject) => {
+        setTimeout(() => {reject("Erro ao processar.")}, 3000)
     })
-    .catch((erro) => {
-        console.error("Erro:", erro)
-    })
+}
 
-const esperar3Segundos = new Promise((resolve) => {
-    setTimeout(() => {
-        resolve("Passaram-se 3 segundos!")
-    }, 3000)
-})
+const p = promessa()
 
-esperar3Segundos.then((mensagem) => {
-    console.log(mensagem)
-})
+p
+.then((resultado) => {console.log(resultado)})
+.catch((erro) => {console.log(erro, "entrei no erro")})

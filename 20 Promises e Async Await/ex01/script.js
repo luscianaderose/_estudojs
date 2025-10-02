@@ -2,11 +2,15 @@
 // concluído" após 2 segundos.
 
 function x(){
-    setTimeout(
-        () => {
-            console.log("Processo consluído.")
-        }, 2000
-    )
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {resolve("Processo concluído.")}, 2000)
+    })
 }
 
-x()
+const y = x()
+
+y
+.then((resultado) => {console.log(resultado)})
+.catch((erro) => {console.log(erro)})
+
+
