@@ -1,0 +1,20 @@
+span {
+    color: red;
+}
+
+div{
+    height: 100px;
+    margin-top: 20px;
+}
+
+#box1{
+    background-color: greenyellow;
+}
+
+#box2{
+    background-color: #73a8bd;
+}
+
+#box3{
+    background-color: rgb(76, 133, 247);
+}

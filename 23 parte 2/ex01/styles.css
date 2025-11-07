@@ -1,0 +1,33 @@
+#header{
+    background-color: greenyellow;
+    height: 100px;
+    width: 100%;
+}
+
+#body{
+    width: 100%;
+    display: flex;
+
+}
+
+#article{
+    width: 60%;
+    height: 300px;
+    background-color: aqua;
+}
+
+#aside{
+    background-color: bisque;
+    width: 20%;
+}
+
+#nav{
+    background-color: blueviolet;
+    width: 20%;
+
+}
+
+#footer{
+    background-color: coral;
+    height: 70px;
+}

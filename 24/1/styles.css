@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f6f6f6;
+}
+
+.topo {
+  background: #0077b6;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.topo nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.topo nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.topo nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.banner {
+  width: 1000px;
+  height: 250px;
+  background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')
+    center/cover;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.conteudo {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  background: white;
+  padding: 20px;
+  gap: 20px;
+}
+
+.conteudo article {
+  width: 60%;
+}
+
+.conteudo aside {
+  width: 40%;
+  background: #e0f7fa;
+  padding: 10px;
+}
+
+footer {
+  background: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

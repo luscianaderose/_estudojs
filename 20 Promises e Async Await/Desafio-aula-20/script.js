@@ -25,9 +25,7 @@ botao.addEventListener('click', function(){
             / Localidade: ${data.localidade} 
             / UF: ${data.uf}`
         })
-        .catch(error => console.error('Erro', error))
-
-    
+        .catch(error => console.error('Erro', error))  
 })
 
 

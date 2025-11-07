@@ -1,0 +1,26 @@
+/* RESET CSS — deixa todos os elementos "crus" para estilizar do zero */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove marcadores padrão das listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove sublinhado e cor padrão das âncoras */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove bordas e estilos padrão de botões e inputs (opcional, mas comum) */
+button,
+input {
+  border: none;
+  background: none;
+  font-family: inherit;
+}
