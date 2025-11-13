@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <!-- ESSENCIAL para media queries funcionarem corretamente em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Teste media query</title>
+
+  <style>
+    *{ margin:0; padding:0; box-sizing:border-box; }
+    header{
+      background: rgb(23,205,129);
+      height: 100px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .flex-container{
+      display:flex;
+      justify-content:center;
+      background:red;
+      padding:10px;
+    }
+
+    .caixa{ border:1px solid gray; padding:6px; border-radius:3px; }
+    input{ margin-right:6px; width:200px; }
+    button{ width:80px; background:rgb(14,122,77); color:white; }
+
+    /* MEDIA QUERY DE TESTE */
+    @media screen and (max-width: 425px){
+      body { background: purple !important; }          /* fácil de ver */
+      .flex-container { flex-direction: column; }      /* empilha */
+      input { margin: 0 0 10px 0; width: 100%; max-width:300px; }
+      button { width: 100%; max-width:120px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="flex-container">
+      <input id="input" class="caixa" type="text" placeholder="teste">
+      <button class="caixa">Search</button>
+    </div>
+  </header>
+</body>
+</html>
