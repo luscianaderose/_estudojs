@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*{
+}
+
+body{
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.fundo{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.config{
+    margin: 10px;
+    border-radius: 10px;
+    font-size: large;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    background-color: rgb(17, 17, 83);
+    height: 20%;
+}
+
+main{
+    background-color: rgba(102, 135, 255, 0.896);
+    height: 50%;
+}
+
+footer{
+    background-color: rgb(17, 17, 83);
+    height: 10%;
+}
